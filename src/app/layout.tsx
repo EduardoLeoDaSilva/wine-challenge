@@ -1,24 +1,29 @@
 import Image from "next/image";
-import { Header, HorizontalList } from "./components/header/header";
+import { Header, HorizontalList } from "./styles/components/header/header";
 import { getCssText } from "./styles";
 import { gobalStyle as globalStyle } from "./styles/global"
 import logo from '../../public/logo.svg'
 import account from '../../public/conta.svg'
 import search from '../../public/Busca.svg'
 import cart from '../../public/vazio.svg'
+
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
 
+
   globalStyle();
+
   return (
     <html lang="en">
-      <header>
+      <head>
         <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
-      </header>
+      </head>
       <body>
+
         <Header>
           <Image src={logo} alt="Brand logo" />
           <HorizontalList>
@@ -35,6 +40,7 @@ export default function RootLayout({
           </HorizontalList>
         </Header>
         {children}
+
       </body>
     </html>
   )

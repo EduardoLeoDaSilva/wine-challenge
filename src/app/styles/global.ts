@@ -19,6 +19,6 @@ export const gobalStyle = globalCss({
     },
 
     body : {
-      backgroundColor: "$background"   
+      backgroundColor: "$background !important"   
     }
 })
